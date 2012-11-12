@@ -7,6 +7,7 @@ $(function() {
 var round1= true;
 var round2= false;
 var picks = 0;
+
 function stockpick1(){
   $('#block2').hide("slow");
   $('#VS1').hide("slow");
@@ -28,6 +29,8 @@ function stockpick1(){
     $('#r2').hide();
     $('#r3').show();
     $('#block1').css("background-color","#FFFC17");
+    $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
+    
   }
   return true;
 }
@@ -52,6 +55,7 @@ function stockpick2(){
     $('#r2').hide();
     $('#r3').show();
     $('#block2').css("background-color","#FFFC17");
+    $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
     
   }
   
@@ -81,6 +85,7 @@ function stockpick3(){
     $('#r2').hide();
     $('#r3').show();
     $('#block3').css("background-color","#FFFC17");
+    $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
   }
   return true;
 }
@@ -106,6 +111,7 @@ function stockpick4(){
      $('#r2').hide();
      $('#r3').show();
      $('#block4').css("background-color","#FFFC17");
+      $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
 
    }
   return true;
