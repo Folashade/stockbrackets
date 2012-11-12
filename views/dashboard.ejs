@@ -4,7 +4,7 @@
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
 <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="javascripts/bracket.js"> </script>
+<script type='text/javascript' src="/javascripts/dashboard.js"> </script>
 	
   </head>
   <body>
@@ -23,16 +23,32 @@
 
 	<!-- End of Yahoo! Finance code -->
 	
-  <div class="container">
-	<div id="leftside">
+  <div id="dashboard_container">
+	<div id="leftpane">
    
 	
-	<h2>Welcome</h2>
+	
+		
 	</div>
-	<div id="rightside">
+	<div id="middlepane">
 		
 	
 	</div>
+	<div id="rightpane">
+		<h2>My Watchlist</h2>
+			<form id="stockstalker">
+			  <input id="ts1" type="text" name="ts1"><br>
+			  <input type="submit" value="Add">
+			
+			</form>
+				<ol>
+				<% for(var i=0; i<wordlist.length; i++) {%>
+				   <li><%= wordlist[i] %></li>
+				<% } %>
+				</ol>
+		
+	</div>
+	
   </div>
   </body>
 </html>
