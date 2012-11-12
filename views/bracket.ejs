@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	
+	<script type='text/javascript' src='/javascripts/bracket.js'> </script>
+
+  </head>
+  <body>
+    <h1><%= title %></h1>
+<div class="container">
+    <form id="form1">
+	 
+
+	<div id="leftside" >
+    <div class="stockblock" id="block1" >
+		<font face="Arial" size="10"><a id="stock1"style="text-decoration: none" href="javascript:stockpick1()"  >Apple</a></font>
+	<!--	<input id="stock2" type="submit" class="stocksubmit" value="Pick Apple"> -->
+	</div>
+	<div>
+		<h2 id="VS1">VS</h2>
+	</div>
+	<div class="stockblock" id="block2" >
+		<font face="Arial" size="10"><a id="stock2"style="text-decoration: none" href="javascript:stockpick2()"  >Google</a></font>
+	<!--	<input id="stock2"type="submit" class="stocksubmit" value="Pick Google"> -->
+	</div>
+	
+	<div id="round2">
+		<br>
+		<h2 id="VS3">VS</h2>
+		<br>
+	</div>
+	
+	<div class="stockblock" id="block3" >
+		<font face="Arial" size="10"><a style="text-decoration: none" href="javascript:stockpick3()" >Microsoft</a></font>
+	<!--	<input id="stock3" type="submit" class="stocksubmit" value="Pick Microsoft"> -->
+	</div>
+	<div>
+		<h2 id="VS2">VS<h2>
+	</div>
+	<div class="stockblock" id="block4" >
+		<font face="Arial" size="10"><a style="text-decoration: none" href="javascript:stockpick4()" >IBM</a></font>
+	<!--	<input id="stock4"type="submit" class="stocksubmit" value="Pick Microsoft"> -->
+	</div>
+   	</div>
+
+	<div id="rightside">
+		<br>
+		<h1 id="r1">Round 1</h1>
+		<h1 id="r2">Round 2</h1>
+		<h1 id="r3">Is your projected winner of this weeks bracket</h>
+	</div>
+	
+</div>
+	
+	</form>
+  </body>
+</html>
