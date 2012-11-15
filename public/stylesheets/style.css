@@ -51,6 +51,12 @@ a {
      border-color: #99CCFF;
     }
   
+  #stockpane{
+    
+     width: 400px;  float: left;
+      border-style: double; 
+       border-color: #99CCFF;
+  }
   
   #rightpane { 
     width: 300px; float: left;

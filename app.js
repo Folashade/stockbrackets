@@ -9,6 +9,7 @@ var express = require('express')
   , get = require('./routes/dashboard_route')
   , put = require('./routes/dashboard_route')
   , bracket_route = require('./routes/bracket_route')
+  , stock = require('./routes/stock')
   , dashboard_route = require('./routes/dashboard_route')
   , http = require('http')
   , path = require('path');
@@ -37,6 +38,7 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.get('/routes/bracket_route', bracket_route.show)
 app.get('/routes/dashboard_route', dashboard_route.show)
+app.get('/routes/stock', stock.show)
 app.get('/users', user.list);
 app.get('/request', get.doGet);	// example handling of a GET request 
 app.put('/request', put.doPut);			// example handling of a PUT request

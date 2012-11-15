@@ -41,11 +41,11 @@
 			  <input type="submit" value="Add">
 			
 			</form>
-				<ol>
+				
 				<% for(var i=0; i<wordlist.length; i++) {%>
-				   <li><%= wordlist[i] %></li>
+				   <p><a href="/routes/stock?stockname=<%=wordlist[i]%>"><%= wordlist[i] %></a></p>
 				<% } %>
-				</ol>
+				
 		
 	</div>
 	

@@ -4,7 +4,6 @@ $(function() {
 	} );
 
 function doPut() {
-  console.log('here');
 	$.ajax({
 			url: "/request",
 			type: "put",
@@ -13,7 +12,7 @@ function doPut() {
 			},
 			success: function(data) {
 			console.log('ok');
-			
+			$('#rightpane').append($("#ts1").val());
 			}
 	});
 	return false;	
