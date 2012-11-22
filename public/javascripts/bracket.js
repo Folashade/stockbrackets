@@ -39,7 +39,7 @@ function stockpick2(){
   $('#block1').hide("slow");
   $('#VS1').hide("slow");
   $('#block2').css("background-color","#CCFF33");
-  pick++;
+  picks++;
   console.log(picks);
   if(picks==2)
   {

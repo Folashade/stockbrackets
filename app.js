@@ -12,9 +12,13 @@ var express = require('express')
   , stock = require('./routes/stock')
   , dashboard_route = require('./routes/dashboard_route')
   , http = require('http')
+  , signup = require('./routes/signup')
   , path = require('path');
 
 var app = express();
+require('/models/user.js')
+
+
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -39,6 +43,7 @@ app.get('/', routes.index);
 app.get('/routes/bracket_route', bracket_route.show)
 app.get('/routes/dashboard_route', dashboard_route.show)
 app.get('/routes/stock', stock.show)
+app.get('/routes/signup', signup.show)
 app.get('/users', user.list);
 app.get('/request', get.doGet);	// example handling of a GET request 
 app.put('/request', put.doPut);			// example handling of a PUT request
