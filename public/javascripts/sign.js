@@ -4,14 +4,18 @@ $(function() {
 	} );
 
 function doPut() {
+  console.log("here")
 	$.ajax({
-			url: "./routes/signup",
+			url: "/request",
 			type: "put",
 			data: {
-				email: $("#ts1").val()
+				email: $("#emailbox").val(),
+			  username: $("#usernamebox").val(),
+			  password: $("#passwordbox").val()
 			},
 			success: function(data) {
 			console.log('ok');
+			window.location.href = '/';
 			}
 	});
 	return false;	

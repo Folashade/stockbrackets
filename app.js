@@ -16,9 +16,10 @@ var express = require('express')
   , path = require('path');
 
 var app = express();
-require('/models/user.js')
 
-
+require('./models/user');
+var mongoose = require('mongoose');
+mongoose.connect( 'mongodb://localhost/stockbrackets' );
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -45,8 +46,7 @@ app.get('/routes/dashboard_route', dashboard_route.show)
 app.get('/routes/stock', stock.show)
 app.get('/routes/signup', signup.show)
 app.get('/users', user.list);
-app.get('/request', get.doGet);	// example handling of a GET request 
-app.put('/request', put.doPut);			// example handling of a PUT request
+app.put('/request', signup.create)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

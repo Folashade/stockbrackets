@@ -10,5 +10,3 @@ var mongoose = require('mongoose');
 });
  
 mongoose.model( 'User', User );
- 
-mongoose.connect( 'mongodb://localhost/stockbrackets' );

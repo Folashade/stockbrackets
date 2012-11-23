@@ -1,6 +1,18 @@
-var mongoose = require('mongoose');
 
-var User = mongoose.model( 'User', User );
+var mongoose = require('mongoose');
+ var Schema = mongoose.Schema;
+     
+     
+ UserSchema = new Schema({
+    'username'   : String,
+    'email'    : String,
+    'password' : String,
+    
+});
+ 
+var User = mongoose.model( 'User', UserSchema );
+
+var user = new User();
 
 exports.show = function(req, res){
   res.render('signup', { title: 'StockBracket'});
@@ -8,11 +20,16 @@ exports.show = function(req, res){
 };
 
 exports.create = function ( req, res ){
+  console.log(req.body.username);
   new User({
     username : req.body.username,
     password : req.body.password,
     email : req.body.email
+    
   }).save( function( err, todo, count ){
-    res.redirect( '/' );
+    console.log("here");
+    res.writeHead(200);
+     res.end();
+   
   });
 };
