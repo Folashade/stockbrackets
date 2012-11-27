@@ -12,7 +12,6 @@ var mongoose = require('mongoose');
  
 var User = mongoose.model( 'User', UserSchema );
 
-var user = new User();
 
 exports.show = function(req, res){
   res.render('signup', { title: 'StockBracket'});

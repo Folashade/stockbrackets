@@ -1,13 +1,17 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
-  "private": true,
+  "name": "stockbrackets",
+  "subdomain": "stockbrackets",
   "scripts": {
-    "start": "node app"
+    "start": "app.js"
+  },
+  "version": "0.0.1-12",
+  "engines": {
+    "node": "0.6.x"
   },
   "dependencies": {
     "express": "3.0.1",
-    "ejs": "*",
-    "stylus": "*"
+    "ejs": "~0.7.1",
+    "mongoose": "3.4.x",
+    "stylus": "0.30.x"
   }
 }
