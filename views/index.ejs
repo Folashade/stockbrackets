@@ -3,43 +3,62 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script type='text/javascript' src="/javascripts/indexscript.js"> </script>
-	
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type='text/javascript' src="/javascripts/bracket.js"> </script>	
   </head>
+
   <body>
 	<div id="nav">
-	<ul>
-	<li>	<img src='/images/logo2.png' ></img></li>
-	<li><a href="/routes/dashboard_route"><h3>Home </h3></a></li>
-	<li><a href=""><h3>News </h3></a></li>
-	<li><a href=""><h3>Contact </h3></a></li>
-	<li><a href=""><h3>About </h3></a></li>
-	<li><a href="/routes/bracket_route"><h3>My Bracket </h3></a></li>
-	</ul>
-	</div>
+		<ul>
+			<!-- <li>	<img src='/images/logo2.png' ></img></li> -->
+			<li><a href="/routes/dashboard_route">Home</a></li>
+			<li><a href="">News</a></li>
+			<li><a href="">Contact</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="/routes/bracket_route">My Bracket</a></li>
+		</ul>
+			<!-- <a href="" style="align: right;"><h3 class="button_logout">Log Out</h3></a> -->
+	</div> <!-- nav -->
 	
 
 
 
 	<!-- End of Yahoo! Finance code -->
 	
-  <div class="container">
+  <div id="container">
+	<div id="sbLogo"><img src='/images/SBLogo.png' width="75%"></img>
+	<div id="wrapper">
+	<div id="content">
 	<div id="leftside">
-    <img src='/images/logo.png' ></img>
-	<img src=''></img>
-	<h2>Your one stop hub for stock market projections!</h2>
+		<h2>What is Stock Brackets?</h2>
+		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac erat varius ante interdum sollicitudin quis vel mi. Duis non ornare erat. Phasellus laoreet, est vitae mattis ultrices, ante mi sodales tortor, at lacinia sapien massa at nulla. Sed aliquam auctor est ut tincidunt.</p>
+		
+		<h2>How does it work?</h2>
+		<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac erat varius ante interdum sollicitudin quis vel mi. Duis non ornare erat. Phasellus laoreet, est vitae mattis ultrices, ante mi sodales tortor, at lacinia sapien massa at nulla. Sed aliquam auctor est ut tincidunt.</p>
+		
+		
+		<h3>Your one stop hub for stock market projections!</h3>
 	</div>
-	<div id="login">
-		<form id="loginform">
-		<h2>Username:<h2> <input type="text" id="usernametag" name="username"><br>
-		<h2>Password:<h2> <input type="text" id="passwordtag" name="password">
-		<input type="submit" value="Login">
-		</form>
+	
+	<div id="rightside">
+		<div id="login">
+			<form id="loginform">
+				<h3> <a id="links" href="/routes/dashboard_route" style="margin-bottom:0;">Login</a> </h3>
+				<h3 style="margin-top:0;">Username:<h3> <input type="text" name="username" style="margin-left:10px;">
+				<h3>Password:<h3> <input type="password" name="password" style="margin-left:10px;">
+					<input type="submit" value="Login">
+			</form>
+			<!-- <h4 style="color: #bbb;"> forgot password? </h4><br> -->
+			
+			<!-- <div class="sneak-peek-link">
+			</div> -->
 
-	<h1> <a href="/routes/signup">Sign Up!</a> </h1>
-	<h1> <a href="/routes/signup">forgot password?</a> </h1>
+			<h2 style="float:right;"> <a id="links" href="/routes/signup">Sign Up!</a> </h1>
+		</div>
 	</div>
-  </div>
+	</div>
+	</div> <!-- wrapper -->
+	
+  </div> <!-- container -->
   </body>
 </html>

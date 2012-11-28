@@ -1,12 +1,22 @@
 
 $(function() {
-	$("#loginform").submit(doPut);
+	$("#loginform").submit(doGet);
 	} );
 
-function doPut() {
-  var username = $("#usernametag").val();
-  var password = $("#passwordtag").val();
-  
+function doGet() {
+
+  $.ajax({
+			url: "/getuser",
+			type: "put",
+			data: {
+				username: $("#usernametag").val(),
+			  password: $("#passwordtag").val(),
+			},
+			
+			success: function(data) {
+				$('#div2').html(data);
+			}
+	});
   console.log(username);
 	return false;	
 }
