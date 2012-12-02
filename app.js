@@ -19,7 +19,8 @@ var app = express();
 
 require('./models/user');
 var mongoose = require('mongoose');
-mongoose.connect( 'mongodb://nodejitsu_rashaun24:uuksosb6u5s356aeh6lb6eiqig@ds039267.mongolab.com:39267/nodejitsu_rashaun24_nodejitsudb8305036216');
+mongoose.connect('mongodb://localhost/stockbrackets');
+//mongoose.connect( 'mongodb://nodejitsu_rashaun24:uuksosb6u5s356aeh6lb6eiqig@ds039267.mongolab.com:39267/nodejitsu_rashaun24_nodejitsudb8305036216');
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -47,7 +48,9 @@ app.get('/routes/stock', stock.show)
 app.get('/routes/signup', signup.show)
 app.get('/users', user.list);
 app.put('/request', signup.create)
+app.put('/requeststock', dashboard_route.doPut)
 app.put('/getuser', routes.getuser)
+app.put('/getuserdashboard', dashboard_route.getuserinfo)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

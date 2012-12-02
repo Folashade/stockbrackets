@@ -14,9 +14,11 @@ function doGet() {
 			},
 			
 			success: function(data) {
-				$('#div2').html(data);
+				console.log(data);
+
+				window.location.href = '/routes/dashboard_route?sessionid='+data;
 			}
 	});
-  console.log(username);
+ 
 	return false;	
 }

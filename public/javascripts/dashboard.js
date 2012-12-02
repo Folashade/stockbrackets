@@ -1,11 +1,37 @@
 $(function() {
 	$("#stockstalker").submit(doPut);
 	$("#f2").submit(doGet);
+	
+	function getUrlVars() {
+      var vars = {};
+      var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+          vars[key] = value;
+      });
+      return vars;
+  }
+  
+  var sessionid = getUrlVars()["sessionid"];
+  console.log(sessionid);
+	
+	$.ajax({
+			url: "/getuserdashboard",
+			type: "put",
+			data: {
+				session_id: sessionid 
+			},
+			success: function(data) {
+			$('#myname').append(data);
+			}
+	});
+	
+	
+	
+	
 	} );
 
 function doPut() {
 	$.ajax({
-			url: "/request",
+			url: "/requeststock",
 			type: "put",
 			data: {
 				testString: $("#ts1").val()

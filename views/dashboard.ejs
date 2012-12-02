@@ -25,13 +25,14 @@
 	
   <div id="dashboard_container">
 	<div id="leftpane">
-   		<h1>My DashBoard</h1>
+   		<h1>Welcome </h1>
+		<p id="myname"></p>
 	
 	
 		
 	</div>
 	<div id="middlepane">
-		<h1>My Current Backet </h1>
+		<h1>My Current Bracket </h1>
 	
 	</div>
 	<div id="rightpane">
@@ -45,6 +46,7 @@
 				<% for(var i=0; i<wordlist.length; i++) {%>
 				   <p><a href="/routes/stock?stockname=<%=wordlist[i]%>"><%= wordlist[i] %></a></p>
 				<% } %>
+		
 				
 		
 	</div>
