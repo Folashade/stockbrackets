@@ -20,7 +20,7 @@ var app = express();
 require('./models/user');
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/stockbrackets');
-//mongoose.connect( 'mongodb://nodejitsu_rashaun24:uuksosb6u5s356aeh6lb6eiqig@ds039267.mongolab.com:39267/nodejitsu_rashaun24_nodejitsudb8305036216');
+//mongoose.connect('mongodb://nodejitsu_rashaun24:uuksosb6u5s356aeh6lb6eiqig@ds039267.mongolab.com:39267/nodejitsu_rashaun24_nodejitsudb8305036216');
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);

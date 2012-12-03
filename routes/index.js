@@ -11,6 +11,7 @@ var wordlist = [];
          'username'   : String,
          'email'    : String,
          'password' : String,
+         'stocks' : [String]
 
      });
 

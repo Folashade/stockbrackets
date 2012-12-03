@@ -20,5 +20,18 @@ function doGet() {
 			}
 	});
  
+  $.ajax({
+			url: "/routes/dashboard_route",
+			type: "put",
+			data: {
+				username: $("#usernametag").val(),
+			  password: $("#passwordtag").val(),
+			},
+			
+			success: function(data) {
+				console.log(data);
+			}
+	});
+ 
 	return false;	
 }

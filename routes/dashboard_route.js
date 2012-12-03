@@ -1,4 +1,4 @@
-var wordlist= [];
+var wordlist = getuserstocks();
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ObjectId = mongoose.Types.ObjectId;
@@ -7,6 +7,7 @@ var ObjectId = mongoose.Types.ObjectId;
          'username'   : String,
          'email'    : String,
          'password' : String,
+         'stocks' : [String]
 
      });
 
@@ -19,11 +20,18 @@ var ObjectId = mongoose.Types.ObjectId;
 var User = mongoose.model('User', UserSchema);
 var Session = mongoose.model('Session', SessionSchema);
 
-
+function getuserstocks(){
+  var stocklist = [];
+  stocklist.push("AAPL");
+  return stocklist;
+  
+}
 
 
 exports.show = function(req, res){
-  res.render('dashboard', { title: 'StockBracket', wordlist: wordlist });
+  
+   console.log(req.body.username+"I GOT IT");
+res.render('dashboard', { title: 'StockBracket', wordlist: ['AAPL', 'GOOG'],name:"hey" });
 
 };
 
@@ -32,12 +40,35 @@ exports.show = function(req, res){
  };
  
  exports.doPut = function(req, res){
-   wordlist.push(req.body.testString);
-  
-   console.log(wordlist);
+   wordlist.push();
    
-   res.writeHead(200);
-   res.end();
+   var session_id = req.body.sessionid;
+   var stock = req.body.testString; 
+   console.log(session_id);
+   
+   //
+   Session.findOne({'_id' : ObjectId(req.body.sessionid) }, function(err,session){
+      if(err)
+      console.log(err);
+      else{
+    
+        var user_session = session.user_id+"";
+        User.findOne({'_id': ObjectId(session.user_id+"")}, function(err,person){
+          console.log(stock);
+          person.stocks.push(stock);
+          person.save();
+          res.writeHead(200);
+          res.end(person.username);
+          
+       });
+        
+        
+      }
+        
+   });
+   
+   
+   
    
   
  };
@@ -54,7 +85,9 @@ exports.show = function(req, res){
         console.log(user_session);
         User.findOne({'_id': ObjectId(user_session)}, function(err,person){
           
-          res.writeHead(200);
+          
+           res.writeHead(200);
+           // res.render('dashboard', { title: 'StockBracket', wordlist: ['AAPL', 'GOOG'],name:"hey" });
           res.end(person.username);
           
         });
