@@ -44,7 +44,7 @@ res.render('dashboard', { title: 'StockBracket', wordlist: ['AAPL', 'GOOG'],name
    
    var session_id = req.body.sessionid;
    var stock = req.body.testString; 
-   console.log(session_id);
+   //console.log(session_id);
    
    //
    Session.findOne({'_id' : ObjectId(req.body.sessionid) }, function(err,session){
@@ -82,13 +82,15 @@ res.render('dashboard', { title: 'StockBracket', wordlist: ['AAPL', 'GOOG'],name
       else{
         
         var user_session = session.user_id+"";
-        console.log(user_session);
+        //console.log(user_session);
         User.findOne({'_id': ObjectId(user_session)}, function(err,person){
           
           
-           res.writeHead(200);
+           res.writeHead(200,'text/html');
            // res.render('dashboard', { title: 'StockBracket', wordlist: ['AAPL', 'GOOG'],name:"hey" });
-          res.end(person.username);
+           var ob = {"username":person.username, "stocks":person.stocks}; 
+           res.write(JSON.stringify(ob));
+          res.end();
           
         });
         

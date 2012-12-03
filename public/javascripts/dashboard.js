@@ -1,6 +1,6 @@
 $(function() {
 	$("#stockstalker").submit(doPut);
-	$("#f2").submit(doGet);
+
 	
 	function getUrlVars() {
       var vars = {};
@@ -20,7 +20,15 @@ $(function() {
 				session_id: sessionid 
 			},
 			success: function(data) {
-			$('#myname').append(data);
+			  
+			  var json = data;
+			  var json_parsed = $.parseJSON(json);
+			  
+			  console.log(json_parsed.username);
+			$('#myname').append(json_parsed.username);
+			for(var x = 0; x < json_parsed.stocks.length; x++){
+			$('#rightpane').append("<p><a href='/routes/stock?stockname="+json_parsed.stocks[x]+"'>"+json_parsed.stocks[x]+"</a></p>");
+		}
 			}
 	});
 	//
@@ -39,26 +47,6 @@ $(function() {
   	});
   	return false;	
   }
-	
-	////
-	function doGet() {
-  	$.ajax({
-  			url: "/request",
-  			type: "get",
-
-  			success: function(data) {
-  				$('#div2').html(data);
-  			}
-  	});
-  	return false;	
-  }
-	
-	
-	
-	
-	
-	///
-	
 	
 	
 	
