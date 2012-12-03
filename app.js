@@ -51,6 +51,7 @@ app.put('/request', signup.create)
 app.put('/requeststock', dashboard_route.doPut)
 app.put('/getuser', routes.getuser)
 app.put('/getuserdashboard', dashboard_route.getuserinfo)
+app.put('/twitterstock', stock.twitstock)
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));

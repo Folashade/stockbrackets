@@ -4,22 +4,28 @@ $(function() {
  $('#r3').hide();
 });
 
-var round1= true;
-var round2= false;
+var bracket1= false;
+var bracket2= false;
 var picks = 0;
 
 function stockpick1(){
   $('#block2').hide("slow");
   $('#VS1').hide("slow");
   $('#block1').css("background-color","#CCFF33");
+  if(bracket1== false)
+  {
   picks++;
   console.log(picks);
-  if(picks==2)
+  bracket1 = true;
+ }
+ 
+  if(picks==2 & bracket2== true)
   {
     $('#VS3').show("slow");
     $('#r2').hide("slow");
     $('#r1').hide();
-    
+    bracket1 = false;
+    bracket2= false;
   }
   
   if(picks >2){
@@ -39,14 +45,20 @@ function stockpick2(){
   $('#block1').hide("slow");
   $('#VS1').hide("slow");
   $('#block2').css("background-color","#CCFF33");
+  if(bracket1== false)
+  {
   picks++;
   console.log(picks);
-  if(picks==2)
+  bracket1= true;
+}
+  
+  if(picks==2 & bracket2== true)
   {
     $('#VS3').show("slow");
    $('#r2').show("slow");
     $('#r1').hide();
-    
+     bracket1 = false;
+     bracket2= false;
   }
   if(picks >2){
     $('#block3').hide("slow");
@@ -68,14 +80,19 @@ function stockpick3(){
   $('#block4').hide("slow");
   $('#VS2').hide("slow");
   $('#block3').css("background-color","#CCFF33");
-  picks++;
-  console.log(picks);
-  if(picks==2)
+   if(bracket2==false)
+    {
+    picks++;
+    console.log(picks);
+    bracket2=true;
+  }
+  if(picks==2 & bracket1 == true)
   {
     $('#VS3').show("slow");
     $('#r2').show("slow");
     $('#r1').hide();
-    
+    bracket1 = false;
+    bracket2= false;
   }
   
   if(picks >2){
@@ -94,13 +111,19 @@ function stockpick4(){
   $('#block3').hide("slow");
   $('#VS2').hide("slow");
   $('#block4').css("background-color","#CCFF33");
+  if(bracket2==false)
+  {
   picks++;
   console.log(picks);
-  if(picks==2)
+  bracket2=true;
+}
+  if(picks==2 & bracket1 == true )
   {
     $('#VS3').show("slow");
     $('#r2').show("slow");
     $('#r1').hide();
+    bracket1 = false;
+    bracket2= false;
     
   }
   if(picks >2){

@@ -13,14 +13,31 @@ $(function() {
   stock = getUrlVars()["stockname"];
   console.log(stock);
   $('#stockname').append(stock);
+  ///
+  $.ajax({
+			url: "/twitterstock",
+			type: "put",
+			data: {
+				stockname: stock 
+			},
+			success: function(data) {
+			   var json = data;
+  			 var json_parsed = $.parseJSON(json);
+         for(var x = 0; x<5; x++){
+  			  console.log(json_parsed.results[x].text);
+  			  $('#rightpane').append("<p>"+ json_parsed.results[x].from_user+":"+json_parsed.results[x].text+"</p></br>");
+			}
+		  
+		}
+			
+	});
+  
+  ///
   getStock();
-  func();
   
   
-  function func()
-  {
-  	document.getElementById("middlepane").innerHTML=""
-  }
+  
+ 
   
   function getStock(){
   var query = stock;
