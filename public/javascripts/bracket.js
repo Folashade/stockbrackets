@@ -2,8 +2,10 @@ $(function() {
  $('#VS3').hide();
  $('#r2').hide();
  $('#r3').hide();
+ $('#subb').hide();
 });
-
+var round1 = [];
+var round2= [];
 var bracket1= false;
 var bracket2= false;
 var picks = 0;
@@ -17,6 +19,9 @@ function stockpick1(){
   picks++;
   console.log(picks);
   bracket1 = true;
+  if(picks<=2)
+  round1.push("Apple")
+ 
  }
  
   if(picks==2 & bracket2== true)
@@ -26,6 +31,7 @@ function stockpick1(){
     $('#r1').hide();
     bracket1 = false;
     bracket2= false;
+    //round1.push("Apple");
   }
   
   if(picks >2){
@@ -34,8 +40,12 @@ function stockpick1(){
     $('#VS3').hide("slow");
     $('#r2').hide();
     $('#r3').show();
+    $('#subb').show();
     $('#block1').css("background-color","#FFFC17");
     $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
+    round2.push("Apple");
+     console.log(round1);
+     console.log(round2);
     
   }
   return true;
@@ -50,6 +60,8 @@ function stockpick2(){
   picks++;
   console.log(picks);
   bracket1= true;
+  if(picks<=2)
+  round1.push("Google");
 }
   
   if(picks==2 & bracket2== true)
@@ -59,6 +71,7 @@ function stockpick2(){
     $('#r1').hide();
      bracket1 = false;
      bracket2= false;
+    // round1.push("Google");
   }
   if(picks >2){
     $('#block3').hide("slow");
@@ -66,9 +79,12 @@ function stockpick2(){
     $('#VS3').hide("slow");
     $('#r2').hide();
     $('#r3').show();
+    $('#subb').show();
     $('#block2').css("background-color","#FFFC17");
     $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
-    
+    round2.push("Google");
+     console.log(round1);
+     console.log(round2);
   }
   
   
@@ -85,6 +101,8 @@ function stockpick3(){
     picks++;
     console.log(picks);
     bracket2=true;
+    if(picks<=2)
+    round1.push("Microsoft");
   }
   if(picks==2 & bracket1 == true)
   {
@@ -93,6 +111,7 @@ function stockpick3(){
     $('#r1').hide();
     bracket1 = false;
     bracket2= false;
+   // round1.push("Microsoft");
   }
   
   if(picks >2){
@@ -101,8 +120,12 @@ function stockpick3(){
     $('#VS3').hide("slow");
     $('#r2').hide();
     $('#r3').show();
+    $('#subb').show();
     $('#block3').css("background-color","#FFFC17");
     $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
+    round2.push("Microsoft");
+     console.log(round1);
+     console.log(round2);
   }
   return true;
 }
@@ -116,6 +139,8 @@ function stockpick4(){
   picks++;
   console.log(picks);
   bracket2=true;
+  if(picks<=2)
+  round1.push("IBM");
 }
   if(picks==2 & bracket1 == true )
   {
@@ -124,7 +149,7 @@ function stockpick4(){
     $('#r1').hide();
     bracket1 = false;
     bracket2= false;
-    
+   // round1.push("IBM");
   }
   if(picks >2){
    
@@ -133,10 +158,80 @@ function stockpick4(){
      $('#VS3').hide("slow");
      $('#r2').hide();
      $('#r3').show();
+     $('#subb').show();
      $('#block4').css("background-color","#FFFC17");
       $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
+       round2.push("IBM");
+       console.log(round1);
+       console.log(round2);
 
    }
   return true;
 }
+function bracketsubmit()
+{
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+  });
+  var session = vars["sessionid"];
+  session = session +"";
+  
+  console.log(round1);
+  console.log(round2);
+  $.ajax({
+			url: "/postbracket",
+			type: "put",
+			data: {
+				round1: round1,
+				round2: round2,
+				session_id: session
+			},
+			success: function(data) {
+			   window.location.href = '/routes/dashboard_route?sessionid='+session;
+			}
+		  
+		
+			
+	});
+  
+}
+
+	function BracketPage()
+	{
+	  var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    var session = vars["sessionid"];
+    
+    window.location.href = '/routes/bracket_route?sessionid='+session;
+	}
+function HomePage()
+{
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+  });
+  var session = vars["sessionid"];
+  
+  window.location.href = '/routes/dashboard_route?sessionid='+session;
+  
+  
+  
+  
+}
+function IdeaPage()
+{
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+  });
+  var session = vars["sessionid"];
+  
+  window.location.href = '/routes/idea?sessionid='+session;
+  
+}
+
+
 

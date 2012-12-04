@@ -3,12 +3,14 @@ var mongoose = require('mongoose');
  var Schema = mongoose.Schema;
      
      
- UserSchema = new Schema({
-    'username'   : String,
-    'email'    : String,
-    'password' : String,
-    'stocks' : [String]
-});
+  UserSchema = new Schema({
+      'username'   : String,
+      'email'    : String,
+      'password' : String,
+      'stocks' : [String],
+      'brackets': [ {round1:[String], round2:[String]} ]
+
+  });
  
 var User = mongoose.model( 'User', UserSchema );
 

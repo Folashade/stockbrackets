@@ -3,14 +3,14 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var ObjectId = mongoose.Types.ObjectId;
 
-      UserSchema = new Schema({
-         'username'   : String,
-         'email'    : String,
-         'password' : String,
-         'stocks' : [String]
+       UserSchema = new Schema({
+           'username'   : String,
+           'email'    : String,
+           'password' : String,
+           'stocks' : [String],
+           'brackets': [ {round1:[String], round2:[String]} ]
 
-     });
-
+       });
      SessionSchema = new Schema({
        'user': String,
        'user_id': mongoose.Schema.Types.ObjectId
@@ -31,7 +31,7 @@ function getuserstocks(){
 exports.show = function(req, res){
   
    console.log(req.body.username+"I GOT IT");
-res.render('dashboard', { title: 'StockBracket', wordlist: ['AAPL', 'GOOG'],name:"hey" });
+res.render('dashboard', { title: 'StockBracket', wordlist: [],name:"hey" });
 
 };
 
@@ -55,6 +55,7 @@ res.render('dashboard', { title: 'StockBracket', wordlist: ['AAPL', 'GOOG'],name
         var user_session = session.user_id+"";
         User.findOne({'_id': ObjectId(session.user_id+"")}, function(err,person){
           console.log(stock);
+          
           person.stocks.push(stock);
           person.save();
           res.writeHead(200);
@@ -88,7 +89,7 @@ res.render('dashboard', { title: 'StockBracket', wordlist: ['AAPL', 'GOOG'],name
           
            res.writeHead(200,'text/html');
            // res.render('dashboard', { title: 'StockBracket', wordlist: ['AAPL', 'GOOG'],name:"hey" });
-           var ob = {"username":person.username, "stocks":person.stocks}; 
+           var ob = {"username":person.username, "stocks":person.stocks,"brackets":person.brackets}; 
            res.write(JSON.stringify(ob));
           res.end();
           

@@ -11,6 +11,7 @@ var express = require('express')
   , bracket_route = require('./routes/bracket_route')
   , stock = require('./routes/stock')
   , dashboard_route = require('./routes/dashboard_route')
+  , idea = require('./routes/idea')
   , http = require('http')
   , signup = require('./routes/signup')
   , path = require('path');
@@ -52,6 +53,11 @@ app.put('/requeststock', dashboard_route.doPut)
 app.put('/getuser', routes.getuser)
 app.put('/getuserdashboard', dashboard_route.getuserinfo)
 app.put('/twitterstock', stock.twitstock)
+app.put('/postbracket', bracket_route.postbracket)
+app.put('/postidea', idea.postidea)
+app.put('/loadideas', idea.loadideas)
+app.get('/routes/idea', idea.show)
+
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
