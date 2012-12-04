@@ -24,11 +24,11 @@ $(function() {
 			  var json = data;
 			  var json_parsed = $.parseJSON(json);
 			  if(json_parsed.brackets.length > 0){
-			  var r1 = json_parsed.brackets[0].round1;
-			  var r2 = json_parsed.brackets[0].round1;
+			  var r1 = json_parsed.brackets[json_parsed.brackets.length-1].round1;
+			  var r2 = json_parsed.brackets[json_parsed.brackets.length-1].round2;
 			  console.log(json_parsed.username);
-			   console.log(json_parsed.brackets[0].round1);
-			   console.log(json_parsed.brackets[0].round2);
+			   console.log(json_parsed.brackets[json_parsed.brackets.length-1].round1);
+			   console.log(json_parsed.brackets[json_parsed.brackets.length-1].round2);
 		   }
 			$('#myname').append(json_parsed.username);
 			for(var x = 0; x < json_parsed.stocks.length; x++){
@@ -103,4 +103,14 @@ function IdeaPage()
   window.location.href = '/routes/idea?sessionid='+session;
   
 }
-
+function NewsPage()
+{
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+  });
+  var session = vars["sessionid"];
+  
+  window.location.href = '/routes/news_route?sessionid='+session;
+  
+}

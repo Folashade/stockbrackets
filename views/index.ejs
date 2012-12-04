@@ -2,23 +2,54 @@
 <html>
   <head>
     <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+   <link rel='stylesheet' href='/stylesheets/style.css'/>
+
+	<link href="http://fonts.googleapis.com/css?family=Raleway:100" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	
+			
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script type='text/javascript' src="/javascripts/indexscript.js"> </script>	
+	<script type='text/javascript' src='/javascripts/indexscript.js'> </script>	
+		
+
+
+		<style>
+
+
+		</style>
+			
   </head>
 
   <body>
+	<div id="nav-top">
+			<!-- <img src='/images/logo2.png' style="float:left; height:30px;"></img> -->
+			
 	<div id="nav">
-		<ul>
-			<!-- <li>	<img src='/images/logo2.png' ></img></li> -->
-			<li><a href="javascript:HomePage()"><h3>Home </h3></a></li>
-			<li><a href=""><h3>News </h3></a></li>
-			<li><a href=""><h3>Contact </h3></a></li>
-			<li><a href="javascript:IdeaPage()"><h3>Ideas </h3></a></li>
-			<li><a href="javascript:BracketPage()"><h3>My Bracket </h3></a></li>
+		<!-- <ul>
+			<li>	<img src='/images/logo2.png' ></img></li>
+			<li><a href="/routes/dashboard_route">Home</a></li>
+			<li><a href="">News</a></li>
+			<li><a href="">Contact</a></li>
+			<li><a href="">About</a></li>
+			<li><a href="/routes/bracket_route">My Bracket</a></li>
+		</ul> -->
+		
+		
+		 <ul class="group" id="example-one">
+			<li><a href="#" id="user-info">Account</a></li>
+			<li><a href="javascript:IdeaPage()">Ideas</a></li>
+			<li><a href="javascript:NewsPage()">News</a></li>
+			<li class="current_page_item">
+				<a href="javascript:HomePage()" rel="#8DC91E">Home</a>
+				</li>
 		</ul>
+		
+		
 			<!-- <a href="" style="align: right;"><h3 class="button_logout">Log Out</h3></a> -->
 	</div> <!-- nav -->
+	</div>
+	<div id="nav-bottom"></div>
 	
 
 
@@ -26,6 +57,18 @@
 	<!-- End of Yahoo! Finance code -->
 	
   <div id="container">
+	
+		<div id="logslideout" >
+			<!-- <img src="/images/feedback.png" alt="Feedback" /> -->
+			<div id="logslideout_inner" style="float:right">
+					<ul>
+						<li><a href="javascript:HomePage()">Dashboard</a></li>
+						<li><a href="javascript:BracketPage()">My Bracket</a></li>
+						<li><a href="/">Logout</a></li>
+					</ul>
+			</div>
+		</div>
+		
 	<div id="sbLogo"><img src='/images/SBLogo.png' width="75%"></img>
 	<div id="wrapper">
 	<div id="content">

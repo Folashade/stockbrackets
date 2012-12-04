@@ -13,7 +13,7 @@ var picks = 0;
 function stockpick1(){
   $('#block2').hide("slow");
   $('#VS1').hide("slow");
-  $('#block1').css("background-color","#CCFF33");
+  // $('#block1').css("background-color","#CCFF33");
   if(bracket1== false)
   {
   picks++;
@@ -40,9 +40,10 @@ function stockpick1(){
     $('#VS3').hide("slow");
     $('#r2').hide();
     $('#r3').show();
+    $('#subb').css({'visibility':'visible'});
     $('#subb').show();
-    $('#block1').css("background-color","#FFFC17");
-    $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
+    // $('#block1').css("background-color","#FFFC17");
+    // $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
     round2.push("Apple");
      console.log(round1);
      console.log(round2);
@@ -54,7 +55,7 @@ function stockpick1(){
 function stockpick2(){
   $('#block1').hide("slow");
   $('#VS1').hide("slow");
-  $('#block2').css("background-color","#CCFF33");
+  // $('#block2').css("background-color","#CCFF33");
   if(bracket1== false)
   {
   picks++;
@@ -79,9 +80,10 @@ function stockpick2(){
     $('#VS3').hide("slow");
     $('#r2').hide();
     $('#r3').show();
+    $('#subb').css({'visibility':'visible'});
     $('#subb').show();
-    $('#block2').css("background-color","#FFFC17");
-    $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
+    // $('#block2').css("background-color","#FFFC17");
+    // $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
     round2.push("Google");
      console.log(round1);
      console.log(round2);
@@ -95,7 +97,7 @@ function stockpick2(){
 function stockpick3(){
   $('#block4').hide("slow");
   $('#VS2').hide("slow");
-  $('#block3').css("background-color","#CCFF33");
+  // $('#block3').css("background-color","#CCFF33");
    if(bracket2==false)
     {
     picks++;
@@ -120,9 +122,10 @@ function stockpick3(){
     $('#VS3').hide("slow");
     $('#r2').hide();
     $('#r3').show();
+    $('#subb').css({'visibility':'visible'});
     $('#subb').show();
-    $('#block3').css("background-color","#FFFC17");
-    $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
+    // $('#block3').css("background-color","#FFFC17");
+    // $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
     round2.push("Microsoft");
      console.log(round1);
      console.log(round2);
@@ -133,7 +136,7 @@ function stockpick3(){
 function stockpick4(){
   $('#block3').hide("slow");
   $('#VS2').hide("slow");
-  $('#block4').css("background-color","#CCFF33");
+  // $('#block4').css("background-color","#CCFF33");
   if(bracket2==false)
   {
   picks++;
@@ -158,9 +161,10 @@ function stockpick4(){
      $('#VS3').hide("slow");
      $('#r2').hide();
      $('#r3').show();
+     $('#subb').css({'visibility':'visible'});
      $('#subb').show();
-     $('#block4').css("background-color","#FFFC17");
-      $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
+     // $('#block4').css("background-color","#FFFC17");
+      // $('.stockblock').animate({"width": "+=50px","height": "+=25px" }, "slow");
        round2.push("IBM");
        console.log(round1);
        console.log(round2);
@@ -230,6 +234,18 @@ function IdeaPage()
   var session = vars["sessionid"];
   
   window.location.href = '/routes/idea?sessionid='+session;
+  
+}
+
+function NewsPage()
+{
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+  });
+  var session = vars["sessionid"];
+  
+  window.location.href = '/routes/news_route?sessionid='+session;
   
 }
 

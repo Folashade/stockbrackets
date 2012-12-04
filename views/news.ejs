@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+	
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script type='text/javascript' src='/javascripts/newsscript.js'> </script>
+	<script>document.createElement('section');</script>
+	<script>
+	$('#sidebox .tab').toggle(function(){
+	    $('#sidebox').animate({'left':0});
+	}, function(){
+	    $('#sidebox').animate({'left':-150});
+	});​
+	</script>
+	
+	<style>
+			#slideout {
+				position: fixed;
+/*				top: 100px;
+				left: 0;*/
+				top: 200px;
+				right:0;
+/*				left: 928px;*/
+				width: 35px;
+				padding: 12px 0;
+				text-align: center;
+				background: #6DAD53;
+				-webkit-transition-duration: 0.3s;
+				-moz-transition-duration: 0.3s;
+				-o-transition-duration: 0.3s;
+				transition-duration: 0.3s;
+				-webkit-border-radius: 5px 0 0 5px;
+				-moz-border-radius: 5px 0 0 5px;
+				border-radius: 5px 0 0 5px;
+			}
+			#slideout_inner {
+				position: fixed;
+				top: 200px;
+				right: -250px;
+				background: #6DAD53;
+				width: 200px;
+				padding: 25px;
+				height: 130px;
+				-webkit-transition-duration: 0.3s;
+				-moz-transition-duration: 0.3s;
+				-o-transition-duration: 0.3s;
+				transition-duration: 0.3s;
+				text-align: left;
+				-webkit-border-radius: 0 0 5px 0;
+				-moz-border-radius: 0 0 5px 0;
+				border-radius: 0 0 5px 0;
+			}
+			#slideout_inner textarea {
+				width: 190px;
+				height: 100px;
+				margin-bottom: 6px;
+			}
+			#slideout:hover {
+/*				left: 250px;*/
+/*				left: 1150px;*/
+				right: 0;
+			}
+			#slideout:hover #slideout_inner {
+				right:0px;
+			}
+	</style>
+  
+</head>
+
+  <body>
+	<div id="nav-top">
+
+	<div id="nav">
+
+		 <ul class="group" id="example-one">
+			<li><a href="#" id="user-info">Account</a></li>
+			<li><a href="javascript:IdeaPage()">Ideas</a></li>
+			<li class="current_page_item"><a href="javascript:NewsPage()">News</a></li>
+			<li >
+				<a href="javascript:HomePage()" rel="#8DC91E">Home</a>
+				</li>
+		</ul>
+
+
+			<!-- <a href="" style="align: right;"><h3 class="button_logout">Log Out</h3></a> -->
+	</div> <!-- nav -->
+	</div>
+	<div id="nav-bottom"></div>
+	
+		
+			
+	  <div id="container" >
+		
+		<div id="logslideout" >
+			<!-- <img src="/images/feedback.png" alt="Feedback" /> -->
+			<div id="logslideout_inner" style="float:right">
+					<ul>
+						<li><a href="javascript:HomePage()">Dashboard</a></li>
+						<li><a href="javascript:BracketPage()">My Bracket</a></li>
+						<li><a href="/">Logout</a></li>
+					</ul>
+			</div>
+		</div>
+		
+		 <div class="body-wrapper" style="border-top: 0px solid #ccc;">
+			
+			<div id="news-header">NEWS</div>
+			
+		  <div id="inner-news-wrapper">
+			
+			
+
+				
+			
+			
+			<div class="accordion" style="text-align:left;">
+				
+
+				
+				<section id="one">
+					<h2><a href="#one">Apple’s iPad Mini Launch Draws Smaller Crowds Than Previous Products</a></h2>
+					<div>
+						<p>
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9u1qObjl2RQmI-M7ByEtxs8GuA2Ne-wxsq43lDwBJC90UVpjf" alt="ipad" height="150" style="float:left;"> The iPad mini officially went on sale today, and the response at physical retail stores has been mixed. Some areas are seeing decent-sized lines, according to Reuters this morning, including Tokyo and Seoul Apple Stores with crowds of 100 or more, but overall, the news organization notes that crowds are smaller than they have been in the past for other launches. The Apple Store in Sydney, for instance, had 50 people in line when it opened compared to a line covering several blocks for the iPhone 5.</p>
+
+							<p>Some locations had more sizeable lines than others, like the Amsterdam Apple Store, as well as Apple’s Munich location. And while lines in New York City lines seemed to be suffering as New Yorkers dealt with more important issues, as of this morning it looks like lines at some locations at least were building considerably. At a store in La Cañada, Spain, a decent-sized group of customers also queued.</p>
+
+							<p>The Covent Garden Apple Store in the U.K. saw maybe one of the smallest crowds according to reports on Twitter, and at the Regent Street location you can apparently walk in and buy an iPad mini right now. And reports from various U.S. locations including Maryland, Ohio, Florida and Buffalo show only small lines in those locations only an hour or so ahead of stores opening on the east coast. Regional locations always have smaller lines than the bigger flagship stores, but for the iPhone 5 launch lines were considerably larger in small town locations even at partner resellers like AT&T.</p>
+
+							<p>Compared to previous device launches this year, the crowds are fairly underwhelming. About 450 people lined up in Tokyo ahead of the iPad 3 going on sale, for instance, and lines stretched into the hundreds at locations around the world. The iPad mini is a new category of device for Apple, and users might not have had time to make up their minds about this novel product yet. Yet with other new device launches, like that of the original iPad, lines were huge in a variety of places.</p>
+
+							<p>The iPad mini goes on sale in 34 markets today, and was available for pre-orders beginning Friday, October 26. Pre-orders sold out over the course of the first weekend, but it remains unclear how many were available in that initial crop. Analyst estimates for initial iPad mini sales vary, but Piper Jaffray’s Gene Munster says to expect around 1.5 million, compared to the iPad 3′s 3 million over the launch weekend. These lines suggest conservative estimates are likely on the right track, but it’s also worth noting that only the Wi-Fi version of the iPad mini goes on sale today, so customers could be waiting for its LTE-enabled sibling, which doesn’t ship until later in November.</p>
+		
+		<p class="source">TechCrunch: http://techcrunch.com/2012/11/02/apples-ipad-mini-launch-draws-smaller-crowds-than-previous-product-debuts/</p>
+							
+					</div>
+				</section>
+				
+				<section id="two">
+					<h2><a href="#two">Facebook Inc (FB) & Zynga Inc (ZNGA): Splitsville As Zynga Moves On</a></h2>
+					<div>
+
+						<p><img src ="http://c7.valuewalk.com/wp-content/uploads/2012/07/zynga-facebook1.jpg" alt="breakup" width="250" style="float:left; margin:10px;">
+						Zynga Inc (NASDAQ:ZNGA), according to news released today, will no longer receive special treatment on Facebook. The market responded poorly to the news, the firm’s shares dropped by around 13% before recovering later on in the day. Zynga Inc (NASDAQ:ZNGA) stock now stands at around $2.50, down just 5%. So is the announcement really that bad for Zynga? Our own analysis published earlier, framed the announcement as a move by Facebook Inc (NASDAQ:FB) to distance itself from Zynga as the firm’s fortunes change.</p>
+
+						<p>Zynga Inc (NASDAQ:ZNGA) was not always seen as Facebook’s little brother, however. A look at the history of the relationship between the firm’s is certainly worth the effort for investors. Zynga Inc (NASDAQ:ZNGA) released its first Facebook game, Zynga Poker, in July of 2007. It wasn’t until 2009 that the firm’s fortunes, and its relationship with Facebook Inc (NASDAQ:FB) really took off. In April of that year Zynga became the social networking site’s top developer. In June it released Farmville. That game, and those related to it, have been the real jewels in Zynga’s crown. The company has relied on the freemium model perfected in those applications to supply it with revenue. In June of 2012, Facebook saw the advantages of social gaming and laid out a five year partnership with Zynga Inc (NASDAQ:ZNGA). That partnership was dissolved today.</p>
+
+						<p>It was just weeks before that deal was signed that Zynga threatened to leave Facebook altogether. The firm had set itself against the Facebook credits model of monetization, but after negotiations in which it was guaranteed a competitive advantage over other game developers, the company joined hand in hand with Facebook Inc (NASDAQ:FB). During that conflict, Zynga CEO Mark Pincus announced that Zynga Inc (NASDAQ:ZNGA) would launch its own social network dedicated to gaming. The terms of today’s deal would allow them to do just that. It gives them the same freedom as any other application developer on Facebook’s platform.</p>
+
+						<p>The deal announced today is a preliminary decoupling of Zynga’s fortunes from Facebook’s and vice versa. The companies are still highly connected, however. Zynga Inc (NASDAQ:ZNGA) provided Facebook Inc (NASDAQ:FB) with around 14% of its revenue in 2011. There are no other social networks with the ability and user base to give Zynga a strategic impetus to leave Facebook. There are several ways to interpret the deal. The first, mentioned earlier, is an attempt by Facebook Inc (NASDAQ:FB) to distance itself from a dying company. The second is an attempt by Zynga Inc (NASDAQ:ZNGA) to protect its future plans from Facebook’s control.</p>
+
+						<p>The company’s first game, Zynga Poker, is being touted as the company’s saving grace by some analysts. If Internet poker is legalized in the United States, the company could begin to multiply its revenue in a very short period of time. If Zynga Inc (NASDAQ:ZNGA) were to take full advantage, Facebook Inc (NASDAQ:FB) might be an impediment. Denying Facebook Inc (NASDAQ:FB) control over the firm’s activities is a sensible move in the current atmosphere. Allowing exclusive hosting of the company’s games to the social network would leave online poker revenue taxed, and might result in other obstacles. Today’s agreement will be viewed differently depending on the company’s future success. It could be the day the firm began to die, or it might be the day the firm finally threw off the shackles of Facebook. The interpretation will depend on the company’s management, and the decisions they make.</p>
+
+						<p class="source">ValueWalk: http://www.valuewalk.com/2012/11/facebook-inc-fb-zynga-inc-znga-splitsville-as-zynga-moves-on/</p>
+					</div>
+				</section>
+				
+				<section id="three">
+					<h2><a href="#three">BofA, Citigroup Lose Bid to Dismiss FHFA Mortgage Suits</a></h2>
+					<div>
+						<p>Bank of America Corp. (BAC) and Citigroup Inc. (C) are among banks that lost bids to dismiss lawsuits filed by the Federal Housing Finance Agency over mortgage bonds sold to Fannie Mae (FNMA) and Freddie Mac. U.S. District Judge Denise Cote in Manhattan denied requests by the banks, along with Credit Suisse Group AG (CS) and HSBC Holdings Plc (HSBA), to throw out the cases, according to decisions filed today.</p>
+
+						<p>The banks are among more than a dozen financial institutions, including JPMorgan Chase & Co. (JPM), UBS AG (UBSN) and Goldman Sachs Group Inc. (GS), that were sued by the FHFA last year over losses on about $200 billion in mortgage securities sold to mortgage finance companies Fannie Mae and Freddie Mac. Cote previously ruled that cases against other banks could proceed. In today’s decisions, she said she was adopting the reasoning of the earlier rulings. Lawrence Grayson, a spokesman for Charlotte, North Carolina-based Bank of America, and Citigroup spokeswoman Danielle Romero-Apsilos declined to comment on the rulings.</p>
+
+						<p>Representatives of HSBC and Credit Suisse (CSGN) didn’t immediately respond to e-mails seeking comment on the rulings. The cases are Federal Housing Finance Agency v. Bank of America Corp. (BAC), 11-06195; Federal Housing Finance Agency v. Citigroup Inc., 11-06196; Federal Housing Finance Agency v. Credit Suisse Holdings (USA) Inc., 11-06200; Federal Housing Finance Agency v. HSBC North America Holdings Inc., 11-06189, U.S. District Court, Southern District of New York (Manhattan). To contact the reporter on this story: David McLaughlin in New York at dmclaughlin9@bloomberg.net. To contact the editor responsible for this story: John Pickering at jpickering@bloomberg.net.</p>
+
+						<p class="source">Bloomberg: http://www.bloomberg.com/news/2012-11-28/bofa-citigroup-lose-bid-to-dismiss-fhfa-mortgage-suits.html</p>
+
+					</div>
+				</section>
+				
+				<section id="four">
+					<h2><a href="#four">Sandy Impact Is Blowing Around Consumer Outlook</a></h2>
+					<div>
+
+						<p><img src ="http://images.nationalgeographic.com/wpf/media-live/photos/000/606/cache/hurricane-sandy-empty-places-outside-nyse_60690_600x450.jpg" alt="sandy" width="250" style="float:left; margin:10px;">After she blew in, Sandy took some wind out of consumers’ sails. But the impact should be temporary.</p>
+
+						<p>The Commerce Department reported Friday that personal income was flat in October versus the previous month and nominal spending fell 0.2%. The report noted there were effects from Sandy but Commerce could not quantify the total impact. The largest adjustment was an $18 billion drop in wages and salaries because of work interruptions.</p>
+
+						<p>After accounting for price changes, real consumer spending began this quarter slightly down from its average in the third quarter, when real spending increased at an annual rate of only 1.4%.Households aren’t the only sector that looked peaked this quarter. The latest reports on factory activity also were lackluster, even in places not hit by the storm. On Friday, the Chicago chapter of the Institute for Supply Management said area factory activity is barely expanding this month, and new orders are contracting.</p>
+
+						<p>“Combined with national anecdotes from the Beige Book and Fed manufacturing surveys from other regions of the country, this release suggests a fairly tepid baseline of manufacturing activity in November,” said economists at Goldman Sachs in a research note. Of course, economists don’t expect consumer spending to stay in the red through the quarter. Replacing items lost in the storm will drive a lot of spending.</p>
+
+						<p>Jared Franz, economist at T. Rowe Price, will be watching next Monday’s report on November light vehicles sales as “an important metric to judge the extent of rebuilding efforts.” T. Rowe Price expects a 4.9% increase to an annual rate of 14.9 million as consumers replace flooded vehicles. In addition, shoppers should recover ground during the holiday season, although solid gains seen in early shopping doesn’t mean spending will be strong for the rest of the year.</p>
+
+						<p>After that, however, the outlook is muddied by the uncertainty of tax reform. Most fiscal-cliff watchers expect any compromise to include higher taxes: either the social security levee or the rate on high-income earners. How will people react? The answer for high earners is especially important to the outlook in both the short and long term.</p>
+
+						<p>Faced with higher taxes, upper-income households could choose to spend less, which would have an immediate drag on growth since their spending accounts for the bulk of total purchases, especially discretionary items. Or they could choose to save less to offset the income lost to taxes. That option could slow growth later on since the economy would have less funds available for investment now.</p>
+
+						<p class="source">Wall Street Journal: http://blogs.wsj.com/economics/2012/11/30/sandy-impact-is-blowing-around-consumer-outlook/</p>
+
+					</div>
+				</section>
+
+				<section id="five">
+					<h2><a href="#five">‘Fiscal cliff’ talks at a stalemate over tax hikes</a></h2>
+					<div>
+
+						<p><img src ="http://www.washingtonpost.com/rf/image_606w/2010-2019/WashingtonPost/2012/12/03/National-Economy/Images/Obama_Fiscal_Cliff_01be0.jpg" alt="obama" width="250" style="float:left; margin:10px;"></p>
+
+						<p>As the White House and Republican leaders enter the final month of negotiations to avoid a year-end “fiscal cliff,” both sides struck an uncompromising tone Sunday, as warnings mounted that they will be unable to forge an agreement to stop an automatic series of deep spending cuts and large tax hikes that could push the economy into recession. Following private meetings last week, the senior negotiators for the White House and the Republicans took to the airwaves Sunday to accuse the other side of intransigence and to demand that the opposition concede on the central question of how much to raise taxes on the wealthy.</p>
+
+						<p>“Right now, I would say we’re nowhere, period. We’re nowhere,” House Speaker John A. Boehner (R-Ohio) said on “Fox News Sunday.” Boehner added that the Republicans have offered a way to break the stalemate — by compromising on an overhaul of the tax code that would limit deductions that disproportionately benefit the rich.</p>
+
+						<p>But Treasury Secretary Timothy F. Geithner rejected that proposal Sunday, insisting that the wealthy pay higher tax rates and that Republicans come forward with a plan that meets that requirement. “There’s no path to an agreement that does not involve Republicans acknowledging that rates have to go up on the wealthiest Americans,” he said on NBC’s “Meet the Press.” </p>
+
+						<p>While it had always seemed likely that the two sides would reach a stalemate before finally coming to agreement — as has been the pattern over the past two years — lawmakers and congressional aides tracking the back-and-forth said there’s a growing probability that no deal will be reached in time to avoid the fiscal cliff. “I think we’re going over the cliff,” Sen. Lindsey O. Graham (R-S.C.) said on CBS’s “Face the Nation.” </p>
+
+						<p>Geithner appeared on five Sunday morning news shows — and Boehner on one — amid an intensifying public-relations blitz related to the fiscal cliff. President Obama took his first domestic trip since winning reelection to the Philadelphia suburbs on Friday to press Republicans, which was followed by a Boehner news conference. This week, Obama will gather with governors and make a speech to the Business Roundtable, a lobby group representing big business, to urge lawmakers to embrace his tax proposals. Boehner will meet with governors and rally with small-business owners against tax increases.</p>
+
+						<p>The debate over how to raise taxes on the wealthy is part of the broader discussion over how to reduce federal borrowing over the next decade. At the end of the year, tax rates are scheduled to increase on nearly all Americans, raising hundreds of billions of dollars of new tax revenue but costing the average family about $2,000 a year in take-home pay. Obama wants to freeze tax rates for most Americans while allowing them to rise as high as 39.6 percent for the wealthiest people — defined as earning over $250,000 per year. That will reduce federal borrowing by about $1 trillion over a decade. </p>
+
+						<p>“There’s just no reason why 98 percent of Americans have to see their taxes go up because some members of Congress on the Republican side want to block tax rate increases for 2 percent of the wealthiest Americans,” Geithner said Sunday.</p>
+
+						<p class="source">Washington Post: http://www.washingtonpost.com/business/economy/fiscal-cliff-talks-at-a-stalemate-over-tax-hikes/2012/12/02/1c31b98a-3cc6-11e2-bca3-aadc9b7e29c5_story_1.html</p>
+
+					</div>
+				</section>
+
+				<section id="six">
+					<h2><a href="#six">AT&T to take over as title sponsor in Dallas</a></h2>
+					<div>
+
+						<p><img src ="http://www.mixmeetings.com/files/A_MIX/Examine/l1s_3782.gif" alt="golf" width="250" style="float:left; margin:10px;"></p>
+
+						<p>DALLAS (AP) — The Byron Nelson Championship is getting a new title sponsor, which is sure to raise questions about Tiger Woods' event. The PGA Tour said Friday that AT&T Inc. would take over as title sponsor of the Nelson in 2015, the year after the title contract of Hewlett-Packard Co. expires. AT&T recently moved its headquarters to Dallas.</p>
+
+						<p>AT&T is one of the most prominent sponsors in golf. Along with being a main corporate sponsor at the Masters, the company is the title sponsor on the PGA Tour at the Pebble Beach National Pro-Am and the AT&T National at Congressional, which is run by the Tiger Woods Foundation. Its contract with Woods' foundation expires in 2014, the year before it takes over in Dallas.</p>
+
+						<p>Greg McLaughlin, president of the Tiger Woods Foundation, was optimistic AT&T would stay as a sponsor after 2014. "They've been a great partner of ours," McLaughlin said from the World Challenge in Thousand Oaks, Calif. "Their sponsorship began in '07, so this is an eight-year contract, which is phenomenal in this day and age. We're hopeful they're going to want to continue with the event. I know they like D.C., and they like the event."</p>
+
+						<p>Ron Spears, senior executive vice president of AT&T, said in a release that the company was excited to be the sponsor of the Nelson for 2015 and 2016, which suggested only a two-year deal. "We hope the tournament will be the AT&T Byron Nelson Championship for many years into the future," Spears said. Spears is on the board of directors for the Tiger Woods Foundation.</p>
+
+						<p>AT&T became sponsor of Woods' new tournament at Congressional in 2007, and it had a personal endorsement deal with Woods starting in 2009, with its logo on the bag. AT&T ended that endorsement soon after Woods was caught having multiple affairs at the end of 2009, though the company has remained supportive of the tournament.</p>
+
+						<p>The tournament has raised $14 million since it began in 2007, which has helped support two Tiger Woods Learning Center campuses in the Washington area. McLaughlin said he would meet with AT&T and "figure out strategically what they want to do". "We think it's a great event," he said. "I hope they decide to stay with it." This is only the third change in title sponsor for the Byron Nelson Championship, but the fifth corporate name in the title. GTE was the first sponsor in 1988, changing in 2001 when it was acquired by Verizon. EDS became a new sponsor in 2003, and then that company was acquired by HP before the 2009 tournament.</p>
+
+						<p>The Nelson will be played May 16-19 next year, one week after The Players Championship. It has been played at the TPC Four Seasons Resort Las Colinas in Irving since 1983. There was no mention Friday where it would be played when AT&T takes over in 2015.</p>
+
+						<p class="source">Business Week: http://www.businessweek.com/ap/2012-11-30/at-and-t-to-take-over-as-title-sponsor-in-dallas</p>
+
+					</div>
+				</section>
+
+				<section id="seven">
+					<h2><a href="#seven">Chart of the day: Where the mobile growth opportunities lie</a></h2>
+					<div>
+
+						<p><img src ="http://fortunebrainstormtech.files.wordpress.com/2012/12/screen-shot-2012-12-02-at-6-18-16-am.png?w=598&h=337" alt="mobile chart" width="250" style="float:left; margin:10px;"></p>
+
+						<p>FORTUNE -- If any company has a handle on where the big growth opportunities in mobile lie it's Qualcomm (QCOM), the San Diego-based semiconductor maker whose communications chips can be found in nearly every mobile device on the planet, including millions of feature phones, smartphones and tablets made by Samsung, Nokia (NOK), Apple (AAPL), Research in Motion (RIMM), Sony (SNE), LG, HTC and Microsoft (MSFT).</p>
+
+						<p>The graphic above -- showing which emerging markets are expected to grow the fastest -- is taken from Qualcomm's Nov. 15 Analysts Day presentation, a document chock-a-block with charts, stats and maps designed to persuade shareholders that there's plenty of blue sky ahead.</p>
+
+						<p>One curious thing about the slide deck is that although Apple relies on Qualcomm for its LTE processors, the company's name is never mentioned in the 154-page report, and as near as I can tell only appears once: the tiny image of a white iPhone on page 119. [CORRECTION: The Apple logo and iOS appear on page 10.] The typical photo spread -- such as the one at right -- shows devices that look a lot like Apple's but are made by someone else.</p>
+
+						<p>Why the omission? Probably because Apple uses its own system on a chip -- the A6 -- and not  Qualcomm's Snapdragon. But it's worth noting that if Apple's going to capture a significant share of the growth suggested in Qualcomm's map above, it's going to have to find a way to crack markets that favor devices that cost a good deal less than the iPhone and the iPad.</p>
+
+						<p class="source">CNN Money: http://tech.fortune.cnn.com/2012/12/02/apple-qualcomm-relationship-emerging-markets/?iid=HP_LN</p>
+
+					</div>
+				</section>
+
+				<section id="eight">
+					<h2><a href="#eight">Asian Stocks Fluctuate on China Data, U.S. Budget Concern</a></h2>
+					<div>
+
+						<p><img src ="http://www.mixmeetings.com/files/A_MIX/Examine/l1s_3782.gif" alt="golf" width="250" style="float:left; margin:10px;"></p>
+
+						<p>Asian stocks swung between gains and losses as Chinese manufacturing data added to signs of recovery while U.S. lawmakers continue to debate over a budget compromise to avert a so-called fiscal cliff. Metallurgical Corp. of China, an engineering contractor and equipment manufacturer, climbed 4.4 percent in Hong Kong. Shimizu Corp., a construction company, advanced 4 percent in Tokyo on speculation a deadly highway-tunnel collapse will reduce opposition to more public works spending. Li & Fung Ltd., a supplier of toys and clothing to retailers including Wal-Mart Stores Inc., slipped 2.8 percent.</p>
+
+						<p>AThe MSCI Asia Pacific Index (MXAP) slipped less than 0.1 percent to 124.64 as of 3:50 p.m. in Tokyo, erasing gains of as much as 0.5 percent. The gauge last week advanced last week amid optimism U.S. lawmakers would agree on a budget deal to avert the fiscal cliff and as the front-runner to win Japan’s election this month repeated calls for stimulus.</p>
+
+						<p>“One of the reasons why global equities have done better is primarily expectations over a positive resolution to the fiscal cliff,” said Stephen Corry, Hong Kong-based chief investment strategist at LGT Bank (Hong Kong), which oversees about 13 billion Swiss franc ($14 billion) of Asian assets. “We are getting close to a deadline where we need to see some kind of resolution, and that probably helps explain the current volatility.”</p>
+
+						<p>The Nikkei 225 Stock Average (NKY) gained 0.1 percent in Tokyo and South Korea’s Kospi Index added 0.4 percent. Australia’s S&P/ASX 200 Index climbed 0.5 percent. Hong Kong’s Hang Seng Index dropped 0.7 percent, while China’s Shanghai Composite Index slid 0.9 percent.</p>
+
+						<p>To contact the reporters on this story: Jonathan Burgos in Singapore at jburgos4@bloomberg.net; Adam Haigh in Sydney at ahaigh1@bloomberg.net</p>
+
+						<p class="source">Bloomberg: http://www.bloomberg.com/news/2012-12-03/asian-stocks-at-seven-month-high-on-china-manufacturing.html</p>
+
+					</div>
+				</section>
+
+				<section id="nine">
+					<h2><a href="#nine">Republicans Reprise 2011 Debt-Limit Threat in Cliff Talks</a></h2>
+					<div>
+
+						<p><img src ="http://www.bloomberg.com/image/iL4aS8r_WRSQ.jpg" alt="REpublican" width="250" style="float:left; margin:10px;"></p>
+
+						<p>Republicans are renewing attempts to use a debt-limit increase to force deeper spending cuts, replicating the 2011 showdown that caused the U.S. to come within days of default and led to a credit-rating downgrade.</p>
+
+						<p>As in 2011, many Republicans in Congress see the need to raise the $16.4 trillion limit on public debt in early 2013 as leverage to force President Barack Obama to cut entitlement programs such as Medicare and Medicaid. House Republicans view the U.S. budget deficit, which topped $1 trillion in each of the past four years, as a crisis requiring immediate action.</p>
+
+						<p>“There has to be a reality out there that says we are in serious trouble,” said Representative Tim Walberg, a Michigan Republican. “We can’t just keep raising it because it’s been traditional to do it.”</p>
+
+						<p>The prospect of another debt-ceiling showdown is complicating the stalled talks to prevent more than $600 billion of spending cuts and tax increases from taking effect in January. Republicans, who say they didn’t suffer politically from the 2011 fight, are reprising their tactics. The administration wants to include a debt limit increase in a fiscal cliff deal and prevent Congress from wielding default as a weapon in the future.</p>
+
+						<p>Talks on averting the fiscal cliff are at a standstill. Democrats continue to demand higher tax rates for top earners, while Republicans want to cut spending on entitlements and other programs.</p>
+
+						<p class="source"> Bloomberg: http://www.bloomberg.com/news/2012-12-03/republicans-reprise-2011-debt-limit-threat-in-cliff-talks.html</p>
+
+					</div>
+				</section>
+
+				<section id="ten">
+					<h2><a href="#ten">Merkel Signals Debt Write-Off Possible as Buyback Begins</a></h2>
+					<div>
+
+						<p><img src ="http://www.bloomberg.com/image/iSXDtiJCKu94.jpg" alt="Merkel" width="250" style="float:left; margin:10px;"></p>
+
+						<p>Chancellor Angela Merkel opened the possibility that Germany may ultimately accept a write-off of Greek debt, as policy makers this week attempt to engineer a buyback that’s crucial for Greece to receive more funding.</p>
+
+						<p>With Greece announcing bids today to repurchase bonds issued earlier this year, Merkel told Bild newspaper yesterday that euro leaders might consider writing off debt once the country has a budget surplus. Germany has until now ruled out such a scenario as violating European Union treaties.</p>
+
+						<p>“If Greece one day can rely once again on its own revenue, without having to borrow, then we’ll have to look at this situation and make an evaluation,” Merkel told Bild am Sonntag in an interview when asked about the prospect of debt forgiveness. It wouldn’t happen before 2014 or 2015, “if everything goes according to plan,” the chancellor said.</p>
+
+						<p>The shift on Greece’s mounting indebtedness, which triggered Europe’s debt crisis three years ago, signals a growing consensus that a Greek exit could doom the 17-member single currency. German lawmakers approved the latest package to alleviate Greece’s burden after Finance Minister Wolfgang Schaeuble said a default could foreshadow the euro’s collapse.</p>
+
+						<p>Merkel’s signal of openness to eventual debt forgiveness marks “the end of denial,” Carsten Brzeski, an economist for ING Groep in Brussels who, said in a phone interview. “It’s definitely a shift, but on the other hand, it’s obvious,” said Brzeski, who called an eventual debt writedown inevitable.</p>
+
+						<p>Last week’s agreement by European finance ministers to give Greece more time to meet its debt targets helped ease concerns over the crisis. Spanish 10-year bonds posted a third monthly gain, with yields sliding last week to 5.3 percent from 5.6 percent. The euro rose almost 2 percent in two weeks.</p>
+
+						<p>EU finance ministers will meet again in Brussels today as Greece starts the repurchase operation. The Public Debt Management Agency in Athens announced an offer to spend as much as 10 billion euros ($13 billion) to buy back bonds, swapping them for six-month bills issued by the euro area rescue fund.</p>
+
+						<p class="source">Bloomberg: http://www.bloomberg.com/news/2012-12-02/merkel-softens-on-write-off-as-greece-prepares-buyback.html</p>
+
+					</div>
+				</section>
+			</div> <!-- accordion --> 
+			
+			<div id="slideout" style="float:right">
+				<img src="/images/feedback.png" alt="Feedback" />
+				<div id="slideout_inner">
+					<form>
+						<textarea></textarea>
+						<input type="submit" value="Comment"></input>
+					</form>
+				</div>
+			</div>
+			
+		  </div> <!-- inner-news-wrap -->
+		
+
+			
+		</div> <!-- body wrapper -->
+	  </div> <!-- container -->
+		
+		
+
+		
+  </body>
+</html>

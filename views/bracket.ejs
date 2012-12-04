@@ -3,71 +3,130 @@
   <head>
     <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	
 	<script type='text/javascript' src='/javascripts/bracket.js'> </script>
 
   </head>
+
+<script>
+    $("button").click(function () {
+      $("p").hide("slow");
+    });    
+</script>
+
+
   <body>
+	<div id="nav-top">
+			<!-- <img src='/images/logo2.png' style="float:left; height:30px;"></img> -->
+
 	<div id="nav">
-	<ul>
-	<li>	<img src='/images/logo2.png' ></img></li>
-	<li><a href="javascript:HomePage()"><h3>Home </h3></a></li>
-	<li><a href=""><h3>News </h3></a></li>
-	<li><a href=""><h3>Contact </h3></a></li>
-	<li><a href="javascript:IdeaPage()"><h3>Ideas </h3></a></li>
-	<li><a href="javascript:BracketPage()"><h3>My Bracket </h3></a></li>
-	</ul>
+		 <ul class="group" id="example-one">
+			<li class="current_page_item"><a href="/routes/bracket_route">Account</a></li>
+			<li><a href="javascript:IdeaPage()">Ideas</a></li>
+		
+			<li><a href="javascript:NewsPage()">News</a></li>
+			<li >
+				<a href="javascript:HomePage()">Home</a>
+			</li>
+		</ul>
+
+
+			<!-- <a href="" style="align: right;"><h3 class="button_logout">Log Out</h3></a> -->
+	</div> <!-- nav -->
 	</div>
+	<div id="nav-bottom"></div>
+			
+			<!-- <a href="" style="align: right;"><h3 class="button_logout">Log Out</h3></a> -->
    
 
 <div class="container">
-    <form id="form1">
-	 
+	
+	<div id="logslideout" >
+		<!-- <img src="/images/feedback.png" alt="Feedback" /> -->
+		<div id="logslideout_inner" style="float:right">
+				<ul>
+					<li><a href="javascript:HomePage()">Dashboard</a></li>
+					<li><a href="javascript:BracketPage()">My Bracket</a></li>
+					<li><a href="/">Logout</a></li>
+				</ul>
+		</div>
+	</div>
+	<div class="body-wrapper-brack">
+		<div id="news-header">
+			<p class="topic" id="r1">Round 1</p>
+			<p class="topic" id="r2">Round 2</p>
+			<p class="topic" id="r3">Is your projected winner of this weeks bracket</p>
+					<br><a id="subb" style="text-decoration: none; font-size:20px; visibility:hidden;" href="javascript:bracketsubmit()" >Submit Bracket</a></br>
+		</div>
+		
+	  <div id="inner-bracket-wrapper">
+		
+		<!-- <div id="leftside" > -->
 
-	<div id="leftside" >
-    <div class="stockblock" id="block1" >
-		<font face="Arial" size="10"><a id="stock1"style="text-decoration: none" href="javascript:stockpick1()"  >Apple</a></font>
-	<!--	<input id="stock2" type="submit" class="stocksubmit" value="Pick Apple"> -->
-	</div>
-	<div>
-		<h2 id="VS1">VS</h2>
-	</div>
-	<div class="stockblock" id="block2" >
-		<font face="Arial" size="10"><a id="stock2"style="text-decoration: none" href="javascript:stockpick2()"  >Google</a></font>
-	<!--	<input id="stock2"type="submit" class="stocksubmit" value="Pick Google"> -->
-	</div>
+				
+			<div id="choice">
+		    <div class="stockblock" id="block1" >
+				<a id="stock1" style="text-decoration: none" href="javascript:stockpick1()"  >Apple</a>
+			<!--	<input id="stock2" type="submit" class="stocksubmit" value="Pick Apple"> -->
+			
+			</div>
+			</div>
+				
+			<div><h2 id="VS1">VS</h2></div>
+				<!-- <button class="punch" onclick="stockpick1()">ApplePlease</button> -->
+			
+			<div id="choice">	
+			<div class="stockblock" id="block2"  >
+				<a id="stock2" style="text-decoration: none" href="javascript:stockpick2()"  >Google</a>
+			<!--	<input id="stock2"type="submit" class="stocksubmit" value="Pick Google"> -->
+			</div>
+			</div>
 	
-	<div id="round2">
-		<br>
-		<h2 id="VS3">VS</h2>
-		<br>
-	</div>
 	
-	<div class="stockblock" id="block3" >
-		<font face="Arial" size="10"><a style="text-decoration: none" href="javascript:stockpick3()" >Microsoft</a></font>
-	<!--	<input id="stock3" type="submit" class="stocksubmit" value="Pick Microsoft"> -->
-	</div>
-	<div>
-		<h2 id="VS2">VS<h2>
-	</div>
-	<div class="stockblock" id="block4" >
-		<font face="Arial" size="10"><a style="text-decoration: none" href="javascript:stockpick4()" >IBM</a></font>
+			<div id="round2">
+				<br>
+				<h2 id="VS3">VS</h2>
+				<br>
+			</div>
+			
+			<div id="choice">
+			<div class="stockblock" id="block3" >
+				<a style="text-decoration: none" href="javascript:stockpick3()" >Microsoft</a>
+			<!--	<input id="stock3" type="submit" class="stocksubmit" value="Pick Microsoft"> -->
+			</div>
+			</div>
+			
+			
+			<div>
+				<h2 id="VS2">VS<h2>
+			</div>
+			
+			<div id="choice">
+			<div class="stockblock" id="block4" >
+		<a style="text-decoration: none" href="javascript:stockpick4()" >IBM</a>
 	<!--	<input id="stock4"type="submit" class="stocksubmit" value="Pick Microsoft"> -->
 	</div>
-   	</div>
+			</div>
+   		<!-- </div> -->
 
-	<div id="rightside">
-		<br>
-		<h1 id="r1">Round 1</h1>
-		<h1 id="r2">Round 2</h1>
-		<h1 id="r3">Is your projected winner of this weeks bracket</h1>
-		<br><font face="Arial" size="8"><a id="subb" style="text-decoration: none" href="javascript:bracketsubmit()" >Submit Bracket</a></font></br>
-	</div>
+
+
 	
+	
+	
+		<!-- <div id="rightside"> -->
+			<br>
+
+		<!-- </div> -->
+		
+		<div id="bracket-round">
+
+		</div>
+	
+	  </div> <!-- inner wrapper bracket-->
+	</div>
 </div>
 	
-	</form>
   </body>
 </html>
