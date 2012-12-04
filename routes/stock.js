@@ -19,11 +19,6 @@ var twit = new twitter({
 //  }
 //});
 
-twit.stream('statuses/filter', { track: ['$AAPL','$GOOG'] }, function(stream) {
-  stream.on('data', function (data) {
-    console.log(data.text);
-  });
-});
 
 exports.show = function(req, res){
   console.log(req.query);
